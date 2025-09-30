@@ -1,35 +1,39 @@
 \chapter{Organization Essence Revealing (As-Is)}
 
-The goals of this chapter are to perform an OER analysis as described in~\cite{dietz2015teoo,dietz2020enterprise}. For simplicity, we will only do the following steps: 
+%TODO: remove the instructions
+
+The goals of this chapter are to perform an Organisation Essence Revealing (OER) analysis as described in~\cite{dietz2015teoo,dietz2020enterprise}. We will only do the following steps: 
 
 \begin{enumerate}
-    \item Find and insert or write the project domain description into this document. The domain should have at least 5 ontological transactions. Each transaction needs to have defined at least 5 act. 
-    \item Perform the OER analysis and find \oact{ontological acts} and \iact{infological acts}. 
-    \item Identify ontological transaction kinds and put them in the text. E.g. \oact{[TK1/rq]} 
-    \item Create an extended transaction result table (e-TRT). Map the transaction acts to the project domain description. See the~\cref{tab:etrt}. 
-    \item Create a Subject-Actor table to realize the distinction between roles and DEMO actor roles. See the~\cref{tab:subjectactortable}. 
-    \item Think in trees, not in flows and create the interaction structure of your transaction kinds. See the~\cref{fig:interactionStructure}.  
-    \item Produce the Coordination Structure Diagram (CSD) and the Object Fact Diagram (OFD). See the~\cref{fig:csdModel} and ~\cref{fig:ofdModel}.  
+	\item Provide the domain description and perform the OER analysis in order to identify transactions.
+	\begin{enumerate}
+		\item Write the project domain description into this document. The domain should have at least 5 ontological transactions. Each transaction needs to have defined at least 5 act.
+		\item Perform the OER analysis and find \oact{ontological acts}, \iact{informational acts} and \dact{documental acts}. 
+		\item Identify all transaction kinds and explicitly highlight them in the text, including their identification (preferably numerical) and the specific ontological act involved in the transaction. For example, \oact{[TK1/rq]} indicates that the ontological act is a \textit{request} belonging to \textit{transaction kind no. 1}.
+	\end{enumerate}
+    \item Create an extended Transaction Result Table (e-TRT). Map the identified ontological acts from Step 2 to their corresponding transactions and specific transaction acts, organizing them into coherent and complete transaction structures. Refer to~\cref{tab:etrt} for an example. For each transaction, also provide a properly formulated name, its resulting product, and the (DEMO) actor roles of both the initiator and executor. If any transaction act lacks a corresponding ontological act identified in the domain description, it may be left empty—however, indicate explicitly that it is missing and verify carefully that this is indeed the case.
+    \item Create a Subject-Actor Table to clearly distinguish between domain-specific roles and their corresponding DEMO actor roles within the transactions. See the~\cref{tab:subjectactortable}.
+    \item Produce diagrams, all needs to be in English.
     \begin{enumerate}
-        \item The CSD and OFD models need to be in English.
-        \item CSD - only ontological level. Using interstrictions (dashed lines) will save you from doing PSD. 
-        \item OFD - Someone should be able to devise a database model from the result. At least 5 entities and 15 fields. 
+    	\item Produce the Coordination Structure Diagram (CSD) at the ontological level only, see the~\cref{fig:csdModel}.
+    	\item Produce the Process Structure Diagram (PSD), see the~~\cref{fig:psdModel}.
+    	\item Produce the Object Fact Diagram (OFD). The result should be detailed enough for someone to derive a database model from it. Ensure it includes at least 5 entities and 15 attributes. See the~~\cref{fig:ofdModel}.
     \end{enumerate}
     \item Summarize your modeling thoughts and revelations. 
 \end{enumerate}
 
-\textbf{Correct models are not created on the first iteration, one must go through the steps many times, combine and split transactions to achieve the final result. }
+\textbf{Correct models are not created on the first iteration, one must go through the steps many times, combine and split transactions to achieve the final result. }. 
 
-The process description of the Volley Case and it's OER analysis was taken from the Enterprise Ontology book~\cite{dietz2020enterprise}. 
-
-%In the step 1 a coloring of the process description is made. The coloring can be done on text as well as on the flow chart diagram. 
 \section{OER Step 1: Distinguishing Performa-Informa-Forma}
 
 Legend: 
 \begin{itemize}
     \item \oact{Ontological Act [Transaction Kind/Act type]}
-    \item \iact{Infological act}
+    \item \iact{Informational Act}
+    \item \dact{Documental Act}
 \end{itemize}
+
+The process description of the Volley Case and it's OER analysis was taken from the Enterprise Ontology book~\cite{dietz2020enterprise}
 
 \paragraph{\S 1 Preliminary Rules}
 
@@ -48,7 +52,7 @@ Legend:
 
 
 \begin{landscape}
-\section{OER Step 2: Identifying Transaction Kinds and Actor Roles}
+\section{OER Step 2: Identifying Transaction Kinds}
 
 \begin{table}[h]
 \caption{Extended Transaction Result Table}
@@ -72,6 +76,8 @@ Revoke Accept  &  Not Specified             &   Not Specified             \\ \hl
 \end{tabular}
 \end{table}
 
+\section{OER Step 2: Identifying Actor Roles}
+
 \begin{table}[h]
 \caption{Subject Actor Table}
 \label{tab:subjectactortable}
@@ -85,21 +91,25 @@ Customer & X &  & X \\ \hline
 
 \end{landscape}
 
-\section{OER Step 3: Composing the Essential Model}
+\section{OER Step 3: Producing the diagrams}
 
-Before starting with a CSD model, it is important to think about the transaction interaction structure. The transaction have to form one or more trees to compose into a process. You can see an example in~\cref{fig:interactionStructure}. 
-
-\begin{figure}[h]\centering
-	\includegraphics[width=8cm]{pic/VolleyInteractionStructure}
-	\caption{An Interaction Structure Model of Volley}
-	\label{fig:interactionStructure}
-\end{figure}
+\subsection{Coordination Structure Diagram}
 
 \begin{figure}[h]\centering
-	\includegraphics[width=6cm]{pic/VolleyCSD}
+	\includegraphics[width=5cm]{pic/VolleyCSD}
 	\caption{A CSD Model of Volley~\cite{dietz2020enterprise}}
 	\label{fig:csdModel}
 \end{figure}
+
+\subsection{Process Structure Diagram}
+
+\begin{figure}[h]\centering
+	\includegraphics[width=8cm]{pic/VolleyPSD}
+	\caption{A PSD Model of Volley~\cite{dietz2020enterprise}}
+	\label{fig:psdModel}
+\end{figure}
+
+\subsection{Object Fact Diagram}
 
 \begin{figure}[h]\centering
 	\includegraphics[width=12cm]{pic/VolleyOFD.png}
@@ -110,4 +120,4 @@ Before starting with a CSD model, it is important to think about the transaction
 
 \section{Summary}
 
-Some comments about the OER analysis belong here.
+Summarize the analysis
