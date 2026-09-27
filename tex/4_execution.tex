@@ -5,12 +5,13 @@
 In this final phase, software developers take over to implement the proposed solution.
 
 \begin{enumerate}
-    \item Create an executable BPMN model (reuse the one created in~\cref{sec:to-be}) using Camunda Modeler. Refer to the \href{https://moodle-vyuka.cvut.cz/pluginfile.php/893298/mod_resource/content/4/How%20to%20run%20Camunda%20Modeler.pdf}{Camunda tutorial} for guidance.
+    \item Create an executable BPMN model for \textbf{Camunda~8} (reuse the one created in~\cref{sec:to-be}). Model it in Camunda Modeler (Desktop or Web Modeler) and run it on a Camunda~8 engine, either locally (Camunda~8 Run) or on a Camunda SaaS cluster. Follow the lab session on BPMN execution in Camunda, and the \href{https://docs.camunda.io/}{Camunda~8 documentation}.
     \begin{enumerate}
-        \item The application must support different user roles. Define these roles and assign BPMN activities accordingly, based on responsibilities within the domain.
-        \item Each process step should include a form with appropriate validations as per the specification. Be creative! While advanced UI is welcome, simple text fields are also acceptable.
-        \item Record a short walkthrough video demonstrating the process with multiple simulated participants. (Maximum duration: 5 minutes)
-    \end{enumerate} 
+        \item Simplify the model where needed, but keep the main flow. Use \textbf{user tasks only}: no scripts, connectors or job workers. A step that a real system would automate becomes a user task.
+        \item The application must support different user roles. Define these roles and assign BPMN activities accordingly, based on responsibilities within the domain (in Camunda~8, as the candidate groups or assignees of the user tasks).
+        \item Each process step should include a form (a Camunda Form linked to the user task) with appropriate validations as per the specification. Be creative! While advanced UI is welcome, simple text fields are also acceptable.
+        \item Record a short walkthrough video demonstrating the process with multiple simulated participants: each role completes its tasks in Tasklist, and the running instance is shown in Operate. (Maximum duration: 5 minutes)
+    \end{enumerate}
     \item Present the solution to the customer. Prepare a short, compelling presentation showcasing the To-Be process supported by your software solution. Imagine you are pitching to a customer who has invested 100,000 EUR in the project. Use your own voice. (Maximum duration: 2 minutes)
 \end{enumerate}
 
