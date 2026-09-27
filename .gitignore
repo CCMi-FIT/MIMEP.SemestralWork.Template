@@ -1,0 +1,26 @@
+# LaTeX build output
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.xdv
+
+# The compiled document. The published template PDF,
+# mimep_semestral_project_template.pdf, is committed on purpose.
+/main.pdf
+
+# Editors and OS
+.DS_Store
+.vscode/
+.idea/
+*~
